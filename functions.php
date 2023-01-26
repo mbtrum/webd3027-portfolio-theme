@@ -39,6 +39,16 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 		 * aside, gallery, quote, image, and video
 		 */
 		add_theme_support( 'post-formats', array( 'aside', 'gallery', 'quote', 'image', 'video' ) );
+
+		$defaults = array(
+			'height'               => 400,
+			'width'                => 400,
+			'flex-height'          => true,
+			'flex-width'           => true,
+			'header-text'          => array( 'site-title', 'site-description' ),
+			'unlink-homepage-logo' => true, 
+		);
+		add_theme_support( 'custom-logo', $defaults );
 	}
 endif; // myfirsttheme_setup
 add_action( 'after_setup_theme', 'portfolio_setup' );

@@ -53,4 +53,10 @@ if ( ! function_exists( 'portfolio_setup' ) ) :
 endif; // myfirsttheme_setup
 add_action( 'after_setup_theme', 'portfolio_setup' );
 
+// Enqueue functions
+wp_enqueue_style( 'bootstrap_style', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css' );
+wp_enqueue_script( 'bootstrap_js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js' );
+
+wp_enqueue_style( 'style', get_stylesheet_uri('style.css') );
+
 ?>

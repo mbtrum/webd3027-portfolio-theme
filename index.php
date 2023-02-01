@@ -12,8 +12,6 @@ else :
     _e( 'Sorry, no posts matched your criteria.', 'textdomain' );
 endif;
 
-echo "<div>This is the index.php</div>";
-
 get_footer();
 
 ?>

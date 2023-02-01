@@ -1,13 +1,9 @@
 <?php get_header(); ?>
 
 <div class="row">
-    <div class="col-md-6">
-        <div class="d-flex justify-content-end">
-            <h2><?php echo get_bloginfo("description"); ?></h2>
-            <p>
-                <a href="#" class="btn btn-primary">Let's Talk</a>
-            </p>
-        </div>
+    <div class="col-md-6">                 
+        <h2><?php echo get_bloginfo("description"); ?></h2>
+        <a href="#" class="btn btn-primary">Let's Talk</a>  
     </div>
 
     <div class="col-md-6">
@@ -18,7 +14,7 @@
             $image = wp_get_attachment_image_src( $custom_logo_id , 'medium' );
             $logo = $image[0];
 
-            echo '<img src="'.$logo.'">';
+            echo '<img src="'.$logo.'" class="rounded-circle">';
         }
         ?>
     </div>

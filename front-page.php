@@ -3,7 +3,7 @@
 <div class="row">
     <div class="col-md-6">                 
         <h2><?php echo get_bloginfo("description"); ?></h2>
-        <a href="#" class="btn btn-primary">Let's Talk</a>  
+      <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-info">Let's Talk</a>    
     </div>
 
     <div class="col-md-6">
@@ -48,7 +48,7 @@ foreach($categories as $category) {
         $excerpt = get_the_excerpt($fp->ID);
         $url_post = get_permalink($fp->ID);
         $title = $fp->post_title;
-        $date = $fp->post_date;
+        $date = get_the_date('F j, Y', $fp->ID);
         echo '<img src="'.$url_thumbnail.'" class="img-fluid"><br>';
 
         echo '</div><div class="col-md-6">';

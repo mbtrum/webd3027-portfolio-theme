@@ -11,10 +11,10 @@
         /************* Custom Logo **********************/
         if ( function_exists( 'the_custom_logo' ) ) {        
             $custom_logo_id = get_theme_mod( 'custom_logo' );
-            $image = wp_get_attachment_image_src( $custom_logo_id , 'medium' );
+            $image = wp_get_attachment_image_src( $custom_logo_id , 'large' );
             $logo = $image[0];
 
-            echo '<img src="'.$logo.'" class="rounded-circle">';
+            echo '<img src="'.$logo.'" class="img-fluid rounded-circle">';
         }
         ?>
     </div>
